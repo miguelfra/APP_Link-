@@ -23,7 +23,7 @@ export default {
 
       Logout({commit}){
         localStorage.removeItem('token')
-        window.location.href = '/signin'
+        window.location.href = '/'
       }
     },
 }

@@ -68,7 +68,7 @@ export default {
       } else {
         try {
           const res = await axios.post(
-            "http://localhost:3000/api/auth/signup",
+            "https://favorite-link.herokuapp.com/api/auth/signup",
             this.user
           );
           localStorage.setItem("token", res.data.token);

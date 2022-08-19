@@ -28,6 +28,8 @@
               <button class="btn btn-primary btn-block">
                 SingIn
               </button>
+              <h4 class="mt-">No tienes cuenta ? <router-link to="/signup">Crea Una</router-link></h4 >
+              
             </form>
           </div>
         </div>
@@ -50,7 +52,7 @@ export default {
   methods: {
    async signin(){
       try {
-            const res = await axios.post('http://localhost:3000/api/auth/signin',this.user);
+            const res = await axios.post('https://favorite-link.herokuapp.com/api/auth/signin',this.user);
             localStorage.setItem('token',  res.data.token);
             window.location.href = '/'
         } catch (error) {

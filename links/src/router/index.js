@@ -56,7 +56,7 @@ const router = new VueRouter({
 router.beforeEach((to, from, next) => {
   if (to.matched.some(route => route.meta.requiresToken)) {
     if (!localStorage.getItem('token')) {
-      next('/signup')
+      next('/signin')
     } else{
       next()
     }

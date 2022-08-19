@@ -65,7 +65,7 @@ export default {
       const { id } = this.$route.params;
 
       try {
-        const res = await axios(`http://localhost:3000/api/links/${id}`, {
+        const res = await axios(`https://favorite-link.herokuapp.com/api/links/${id}`, {
           headers: {
             "x-access-token": localStorage.getItem("token"),
           },
